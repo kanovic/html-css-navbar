@@ -74,14 +74,13 @@ main h1 {
 
 .nav-link svg{
   min-width: 2rem;
+  max-height: 2rem;
   margin: 0 1.5rem;
 }
 
 .logo{
   font-weight: bold;
   text-transform: uppercase;
-  /* margin-bottom: 1rem; */
-  text-align: center;
   background-color: #282e3c;
   font-size: 1.5rem;
   letter-spacing: 0.3ch;
