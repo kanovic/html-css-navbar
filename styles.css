@@ -22,25 +22,16 @@ main h1 {
 }
 
 .navbar{
-  top: 0;
-  width: 5rem;
-  height: 100vh;
   position: fixed;
   background-color: #242424;
   transition: width 200ms ease;
-}
-
-.navbar:hover{
-  width: 16rem;
 }
 
 .navbar:hover .logo .nav-link{
     filter: grayscale(0%) opacity(1);
 }
 
-.navbar:hover .nav-text{
-  display: inline;
-}
+
 
 .navbar-nav{
   list-style: none;
@@ -100,4 +91,39 @@ main h1 {
 
 .navbar:hover .logo svg{
   transform: rotate(-180deg);
+}
+
+@media only screen and (max-width:600px){
+  .navbar{
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+  .logo{
+    display: none;
+  }
+  .navbar-nav{
+    flex-direction: row;
+  }
+  .nav-link{
+    justify-content: center;
+  }
+  main {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width:600px){
+  .navbar{
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+  .navbar:hover{
+    width: 16rem;
+  }
+  .navbar:hover .nav-text{
+    display: inline;
+    transition: opacity var(--transition-speed);
+  }
 }
